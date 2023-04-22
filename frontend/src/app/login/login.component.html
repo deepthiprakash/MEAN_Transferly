@@ -1,0 +1,24 @@
+
+<div class=" wrapper" >
+    <div class="logo">
+        <img src="./assets/BAnk.jpg" alt="">
+        
+    </div>
+    <div class="text-center mt-4 name">
+        SignIn
+    </div>
+    <form [formGroup]="loginForm" class="p-3 mt-3" (ngSubmit)="login()">
+        <div class="form-field d-flex align-items-center">
+            <input formControlName="acno"  id="acid" name="acnum1" type="text"  id="userName" [placeholder]="inputplaceholder">
+        </div>
+        <div class="form-field d-flex align-items-center">
+            <input formControlName="psw" id="psw1" name="paswrd1" type="password" id="pwd" placeholder="Password">
+        </div>
+        <button  type="submit" class="btn mt-3">Login</button>
+    </form>
+    <div class="text-center fs-6">
+        <a routerLink="register" href=""><h5>Sign up</h5></a>
+    </div>
+</div>
+
+  

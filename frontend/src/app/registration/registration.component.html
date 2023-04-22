@@ -1,0 +1,30 @@
+<div class=" wrapper" >
+    <div class="logo">
+        <img src="./assets/BAnk.jpg" alt="">
+        
+    </div>
+    <div class="text-center mt-4 name">
+        SignUp
+    </div>
+    <form [formGroup]="registerForm" class="p-3 mt-3">
+        <div class="form-field d-flex align-items-center">
+            <input formControlName="uname" id="unamid" name="usern1" type="text"  placeholder="Username">
+        </div>
+        <div *ngIf="this.registerForm.get('uname')?.errors && this.registerForm.get('uname')?.touched ">
+            <p class="text-danger">required</p>
+              </div>
+        <div class="form-field d-flex align-items-center">
+            <input formControlName="acno" id="acid" name="acnum1" type="text"   placeholder="Account Number">
+        </div>
+        <div *ngIf="this.registerForm.get('acno')?.errors && this.registerForm.get('acno')?.touched ">
+            <p class="text-danger">required</p>
+              </div>
+        <div class="form-field d-flex align-items-center">
+            <input formControlName="psw" id="psw1" name="paswrd1" type="password"  placeholder="Password">
+        </div>
+        <div *ngIf="this.registerForm.get('psw')?.errors && this.registerForm.get('psw')?.touched ">
+            <p class="text-danger">required</p>
+              </div>
+        <button (click)="register()" type="button" class="btn mt-3">Signup</button>
+    </form>
+</div>
